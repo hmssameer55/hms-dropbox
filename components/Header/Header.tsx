@@ -24,13 +24,18 @@ export default function Header() {
         <h2 className="ml-3 font-bold text-xl">Hms Dropbox</h2>
       </Link>
 
-      <div className="flex items-center justify-between gap-4 pe-2">
+      <div
+        className={`flex items-center justify-between ${
+          userId ? "gap-4" : "gap-2"
+        } pe-2`}
+      >
         <ThemeToggler />
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
-          <SignInButton mode="modal" afterSignInUrl="/dashboard" />
+          <Button variant={"default"}>
+            <SignInButton mode="modal" afterSignInUrl="/dashboard" />
+          </Button>
         </SignedOut>
-        {!userId && <Button variant={"outline"}>Sign Up</Button>}
       </div>
     </header>
   );

@@ -84,7 +84,7 @@ export default function Dropbox() {
             <div
               {...getRootProps()}
               className={cn(
-                "w-full cursor-pointer h-56 flex justify-center items-center border-2 border-dashed rounded-lg text-center",
+                "w-full cursor-pointer h-[25vh] flex justify-center items-center border-2 border-dashed rounded-lg text-center",
                 isDragActive
                   ? "bg-[#035FFE] text-white animate-pulse"
                   : "bg-slate-100/50 dark:bg-slate-800/80 text-slate-400"
