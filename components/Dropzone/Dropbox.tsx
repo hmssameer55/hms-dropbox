@@ -61,7 +61,7 @@ export default function Dropbox() {
         });
       });
     } catch (error) {
-      console.error(error);
+      console.log(error);
     } finally {
       setLoading(false);
     }
